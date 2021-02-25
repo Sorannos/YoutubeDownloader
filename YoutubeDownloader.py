@@ -40,7 +40,7 @@ Label(root, text = 'Paste Link Here:', font = 'arial 15 bold').place(x= 185 , y 
 link_enter = Entry(root, width = 70,textvariable = link,justify="center").place(x = 32, y = 90)
 
 drop = OptionMenu( root , clicked , *options).place(x = 460, y = 82) 
-button2 = Button(text="BROWSE", command=browse_button, width="10", bg = 'lightblue', font = 'arial 11 bold').place(x = 232, y = 120)
+button2 = Button(text="BROWSE", command=browse_button, width="10", bg = 'lightblue', font = 'arial 11 bold').place(x = 225, y = 120)
 
 def Downloader():    
     choice = clicked.get() 
