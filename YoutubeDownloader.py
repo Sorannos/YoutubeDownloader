@@ -15,7 +15,7 @@ Label(root,text = 'Youtube Video Downloader', font ='arial 20 bold').pack()
 link = StringVar()
 
 Label(root, text = 'Paste Link Here:', font = 'arial 15 bold').place(x= 160 , y = 60)
-link_enter = Entry(root, width = 53,textvariable = link,justify="center").place(x = 32, y = 90)
+link_enter = Entry(root, width = 70,textvariable = link,justify="center").place(x = 32, y = 90)
 
 def Downloader():     
     url =YouTube(str(link.get()))
