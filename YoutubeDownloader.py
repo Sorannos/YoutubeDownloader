@@ -26,6 +26,7 @@ root.geometry('550x300')
 root.resizable(0,0)
 root.iconbitmap('ico\\youtube.ico')
 root.title("Youtube video downloader")
+root.config(bg='white')
 
 folder_path = StringVar()
 
@@ -37,14 +38,14 @@ options = [
 clicked = StringVar() 
 clicked.set( "mp4" )
 
-Label(root,text = 'Youtube Video Downloader', font ='Raleway 20 bold').pack()
+Label(root,text = 'Youtube Video Downloader', font ='Raleway 20 bold', bg = 'white').pack()
 
 link = StringVar()
 way = StringVar()
 
-Label(root, text = 'Paste Link Here:', font = 'Raleway 15 bold').place(x= 185 , y = 60)
-link_enter = Entry(root, width = 70,textvariable = link,justify="center").place(x = 32, y = 90)
-way_enter = Entry(root, width = 30,textvariable = way,justify="center")
+Label(root, text = 'Paste Link Here:', font = 'Raleway 15 bold', bg = 'white').place(x= 185 , y = 60)
+link_enter = Entry(root, width = 70,textvariable = link,justify="center", bg = '#eaeaea').place(x = 32, y = 90)
+way_enter = Entry(root, width = 30,textvariable = way,justify="center", bg = '#eaeaea')
 way.set(filename)
 way_enter.place(x = 32, y = 125)
 drop = OptionMenu( root , clicked , *options)
