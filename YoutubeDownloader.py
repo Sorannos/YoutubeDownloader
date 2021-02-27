@@ -62,10 +62,10 @@ def Downloader():
     try:
         if choice == 'mp4':
                 url =YouTube(str(link.get()))
-                video = url.streams.first()
+                video = url.streams.filter(res='1080p').first()
                 try:
                     video.download(folder)
-                    Label(root, text = 'downloaded', font = 'Raleway 15').place(x= 205 , y = 220)
+                    Label(root, text = 'downloaded', font = 'Raleway 15', bg='white').place(x= 205 , y = 220)
                 except:
                     tk.messagebox.showerror(title='error', message='You must try another folder.')
         
@@ -78,7 +78,7 @@ def Downloader():
                 base, ext = os.path.splitext(out_file) 
                 new_file = base + '.mp3'
                 os.rename(out_file, new_file) 
-                Label(root, text = 'downloaded', font = 'Raleway 15').place(x= 205 , y = 220) 
+                Label(root, text = 'downloaded', font = 'Raleway 15', bg='white').place(x= 205 , y = 220) 
             except:
                 tk.messagebox.showerror(title='error', message='You must try another folder.')
 
